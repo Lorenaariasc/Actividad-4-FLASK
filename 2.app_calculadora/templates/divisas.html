@@ -1,0 +1,30 @@
+<!-- divisas.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Calculadora de divisas</h1>
+    <p>Calcular el dolar a peso</p>
+
+    <form action="/divisas" method="POST">
+
+        <div class="row">
+            <div class="col-md-6">
+                <input type="number" class="form-control" name="peso" placeholder="Ingresa la cantidad" aria-label="Ingresa el primer numero">
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Calcular</button>
+            </div>
+        </div>
+    </form>
+    
+    <div class="row py-2">
+        <div class="col">
+            <h3> La conversión en dolar a peso es: {{total_dolar}}</h3>
+            <h3>La conversión en euro a peso es: {{total_euro}}</h3>
+            <h3>La conversión en libra a peso es: {{total_libra}}</h3>
+            
+        </div>
+    </div>
+{% endblock %}
